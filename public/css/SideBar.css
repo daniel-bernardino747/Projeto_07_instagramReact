@@ -1,4 +1,78 @@
-.c-sidebar {
-    background-color: purple;
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875em;
+    font-weight: 500;
+}
 
+.c-sidebar__box-suggestions h1,
+.c-sidebar__box-suggestions h2,
+.c-sidebar__suggestion h1,
+.c-sidebar__suggestion h2,
+.c-sidebar__suggestion h3 {
+    font-size: 0.75em;
+}
+
+.c-sidebar__user img,
+.c-sidebar__suggestion img {
+    border-radius: 1.875em;
+    margin-right: 1em;
+
+    object-fit: cover;
+    object-position: 20% 10%;
+}
+
+
+
+
+
+.c-sidebar__user {
+    height: 6.25em;
+}
+
+.c-sidebar__user ul {
+    height: 3.5em;
+}
+
+.c-sidebar__user img {
+    height: 3.5em;
+    width: 3.5em;
+}
+
+.c-sidebar__user h2 {
+    padding-top: 0.1875em;
+    font-weight: 300;
+}
+
+
+
+
+
+.c-sidebar__box-suggestions h1 {
+    color: #8E8E8E;
+}
+
+.c-sidebar__box-suggestions ul {
+    margin: 1em 0;
+}
+
+.c-sidebar__box-suggestions li {
+    margin: 0.5em 0;
+}
+
+.c-sidebar__suggestion img {
+    height: 2em;
+    width: 2em;
+}
+
+.c-sidebar__suggestion h1 {
+    color: #000000;
+    padding-bottom: 0.5em;
+}
+
+.c-sidebar__suggestion h2 {
+    color: #8E8E8E;
+}
+
+.c-sidebar__suggestion h3 {
+    color: #139EF2;
 }

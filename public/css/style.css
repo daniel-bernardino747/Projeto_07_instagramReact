@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
+    font-size: 0.875em;
 }
 
 .c-page {
@@ -16,6 +16,10 @@
 
 .u-center-xy {
     justify-content: center;
+    align-items: center;
+}
+
+.u-center-x {
     align-items: center;
 }
 
