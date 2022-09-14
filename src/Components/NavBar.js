@@ -8,7 +8,7 @@ const navItens = [
 
 export default function NavBar() {
     return (
-        <header className="c-main__header u-center-xy u-display-flex">
+        <header className="c-page__header u-center-xy u-display-flex">
 
             <div className="u-width-max-935 u-space-between-center u-display-flex">
 
@@ -23,7 +23,10 @@ export default function NavBar() {
                 </div>
 
                 <forms>
-                    <input type="text" placeholder="Pesquisar"></input>
+                    <input
+                        type="text"
+                        placeholder="Pesquisar">
+                    </input>
                 </forms>
 
                 <ul className="u-display-flex">

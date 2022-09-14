@@ -1,4 +1,4 @@
-.c-main__header {
+.c-page__header {
     background: #FFFFFF;
     border: 0.0625em solid #DBDBDB;
     height: 3.375em;
@@ -10,19 +10,19 @@
     z-index: 1;
 }
 
-.c-main__header img {
+.c-page__header img {
     border-left: 0.0625em solid #DBDBDB;
     height: 1.875em;
 
     padding-left: 0.625em;
 }
 
-.c-main__header ion-icon {
+.c-page__header ion-icon {
     font-size: 1.375em;
     margin-right: 0.6em;
 }
 
-.c-main__header input {
+.c-page__header input {
     background: #FAFAFA;
     border: 0.0625em solid #DBDBDB;
     border-radius: 0.1875em;
@@ -32,6 +32,6 @@
     text-align: center;
 }
 
-.c-main__header input:focus {
+.c-page__header input:focus {
     outline: 0;
 }

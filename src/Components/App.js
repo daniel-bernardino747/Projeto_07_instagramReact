@@ -1,9 +1,11 @@
 import NavBar from "./NavBar"
+import Corpo from "./Corpo"
 
 export default function App() {
     return (
-        <main className="c-main">
+        <div className="c-page">
             <NavBar />
-        </main>
+            <Corpo />
+        </div>
     );
 }
