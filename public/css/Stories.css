@@ -1,0 +1,50 @@
+.c-main__stories {
+    background: #FFFFFF;
+    border: 0.0625em solid #DBDBDB;
+    border-radius: 0.1875em;
+
+    height: 7.375em;
+    overflow: hidden;
+}
+
+.c-stories {
+    width: 100%;
+    height: 100%;
+}
+
+.c-stories li {
+    width: 4.875em;
+    height: 100%;
+    margin: 0 0.75em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.c-stories p {
+    font-weight: 400;
+    font-size: 0.85em;
+    word-wrap: break-word;
+}
+
+.c-stories__border, .c-stories__photo {
+    border-radius: 1.875em;
+    object-fit: cover;
+    object-position: 20% 10%;
+}
+
+.c-stories__border {
+    width: 4.25em;
+    height: 4.25em;
+}
+
+.c-stories__photo {
+    width: 3.5em;
+    height: 3.5em;
+
+    position: absolute;
+    left: 0.34375em;
+    top: 0.34375em;
+}

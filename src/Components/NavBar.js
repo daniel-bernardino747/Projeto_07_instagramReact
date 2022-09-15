@@ -1,12 +1,11 @@
-const navItens = [
-    <ion-icon name="paper-plane-outline"></ion-icon>,
-    <ion-icon name="compass-outline"></ion-icon>,
-    <ion-icon name="heart-outline" ></ion-icon>,
-    <ion-icon name="person-outline"></ion-icon>
-]
-
-
 export default function NavBar() {
+    const navItens = [
+        <ion-icon name="paper-plane-outline"></ion-icon>,
+        <ion-icon name="compass-outline"></ion-icon>,
+        <ion-icon name="heart-outline" ></ion-icon>,
+        <ion-icon name="person-outline"></ion-icon>
+    ]
+
     return (
         <header className="c-page__header u-center-xy u-display-flex">
 

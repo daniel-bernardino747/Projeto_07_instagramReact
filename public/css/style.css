@@ -3,11 +3,26 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.875em;
+    font-size: 14px;
 }
 
-.c-page {
+body {
     background-color: #FAFAFA;
+}
+
+.c-main {
+    margin-top: 2.125em;
+}
+
+.c-sidebar {
+    margin-top: 1.5em;
+}
+
+
+
+
+.u-position-relative {
+    position: relative;
 }
 
 .u-display-flex {

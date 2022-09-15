@@ -1,30 +1,3 @@
-const UsersAccounts = [
-    <Item
-        isSuggestion={false}
-        url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-        name="Nome Oficial Usuário"
-        subtitle="Nome Usuário editável"
-    />,
-    <Item
-        isSuggestion={true}
-        url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-        name="Nome Sugestão"
-        subtitle="Nome oficial"
-    />,
-    <Item
-        isSuggestion={true}
-        url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-        name="Nome Sugestão"
-        subtitle="Nome oficial"
-    />,
-    <Item
-        isSuggestion={true}
-        url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-        name="Nome Sugestão"
-        subtitle="Nome oficial"
-    />
-]
-
 function Template(props) {
     return (
         <div className="u-center-x u-display-flex">
@@ -43,6 +16,7 @@ function Template(props) {
 }
 
 function Item(props) {
+
     const isSuggestion = props.isSuggestion;
 
     if (isSuggestion) {
@@ -69,6 +43,32 @@ function Item(props) {
 
 
 export default function SideBar() {
+    const UsersAccounts = [
+        <Item
+            isSuggestion={false}
+            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+            name="Nome Oficial Usuário"
+            subtitle="Nome Usuário editável"
+        />,
+        <Item
+            isSuggestion={true}
+            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+            name="Nome Sugestão"
+            subtitle="Nome oficial"
+        />,
+        <Item
+            isSuggestion={true}
+            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+            name="Nome Sugestão"
+            subtitle="Nome oficial"
+        />,
+        <Item
+            isSuggestion={true}
+            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
+            name="Nome Sugestão"
+            subtitle="Nome oficial"
+        />
+    ]
 
     const currentUser = UsersAccounts.filter(user => user.props.isSuggestion === false);
     const suggestions = UsersAccounts.filter(user => user.props.isSuggestion === true)
