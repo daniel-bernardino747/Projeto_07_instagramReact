@@ -1,4 +1,4 @@
-import borderBackground from 'https://github.com/daniel-bernardino747/Projeto_07_instagramReact/blob/main/public/images/stories_background.png'
+import borderBackground from '../images/stories_background.png'
 
 export default function Stories() {
     const items = [
@@ -109,10 +109,11 @@ export default function Stories() {
     ]
 
     return (
-        <section className="c-main__stories">
+        <section className="c-main__stories u-position-relative">
             <ul className="c-stories u-display-flex">
                 {items.map(story => <li>{story}</li>)}
             </ul>
+            <ion-icon name="chevron-forward-circle"></ion-icon>
         </section>
     )
 }
