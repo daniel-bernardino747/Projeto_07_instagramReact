@@ -33,6 +33,7 @@ b {
 .c-post__header h1 {
     margin-left: 1em;
     font-size: 1em;
+    font-weight: 500;
 }
 
 .c-post__footer {
