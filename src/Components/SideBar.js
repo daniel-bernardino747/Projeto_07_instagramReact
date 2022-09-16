@@ -15,7 +15,7 @@ function Template(props) {
     )
 }
 
-function Item(props) {
+function Sugestao(props) {
 
     const isSuggestion = props.isSuggestion;
 
@@ -44,25 +44,25 @@ function Item(props) {
 
 export default function SideBar() {
     const UsersAccounts = [
-        <Item
+        <Sugestao
             isSuggestion={false}
             url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
             name="Nome Oficial Usuário"
             subtitle="Nome Usuário editável"
         />,
-        <Item
+        <Sugestao
             isSuggestion={true}
             url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
             name="Nome Sugestão"
             subtitle="Nome oficial"
         />,
-        <Item
+        <Sugestao
             isSuggestion={true}
             url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
             name="Nome Sugestão"
             subtitle="Nome oficial"
         />,
-        <Item
+        <Sugestao
             isSuggestion={true}
             url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
             name="Nome Sugestão"
