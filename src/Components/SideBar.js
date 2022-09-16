@@ -1,77 +1,109 @@
-function Template(props) {
-    return (
-        <div className="u-center-x u-display-flex">
-            <div>
-                <img
-                    src={props.image}
-                    alt="User Perfil Image"
-                />
-            </div>
-            <div>
-                <h1>{props.name}</h1>
-                <h2>{props.subtitle}</h2>
-            </div>
-        </div>
-    )
-}
+import { useState } from "react"
 
-function Sugestao(props) {
+function User(props) {
+    const [name, setName] = useState(props.editName)
+    const [photo, setPhoto] = useState(props.url)
 
-    const isSuggestion = props.isSuggestion;
-
-    if (isSuggestion) {
+    function PhotoPerfil() {
         return (
-            <div className="u-space-between-center u-display-flex">
-                <Template
-                    image={props.url}
-                    name={props.name}
-                    subtitle={props.subtitle}
-                />
-                <h3>Seguir</h3>
-            </div>
-        );
+            <img
+                onClick={
+                    () => window.confirm("Deseja trocar de foto?") ?
+                        setPhoto(prompt("Digite a URL da imagem que deseja:")) :
+                        console.log("None")
+                }
+                src={photo}
+                alt="User Image"
+            />
+        )
+    }
+
+    function IconEdit() {
+        return (
+            <ion-icon
+                onClick={
+                    () => window.confirm("Deseja trocar de nome?") ?
+                        setName(prompt("Qual nome deseja usar?")) :
+                        console.log("None")
+                }
+                name="pencil-outline"
+            ></ion-icon>
+        )
     }
 
     return (
-        <Template
-            image={props.url}
-            name={props.name}
-            subtitle={props.subtitle}
-        />
+        <div className="u-center-x u-display-flex">
+            <div>
+                <PhotoPerfil />
+            </div>
+            <div>
+                <h1>{props.name}</h1>
+                <div className="u-display-flex">
+                    <h2>{name}</h2>
+                    <IconEdit />
+                </div>
+            </div>
+        </div>
     );
-}
+};
+
+function Sugestao(props) {
+    return (
+        <div className="u-space-between-center u-display-flex">
+            <div className="u-center-x u-display-flex">
+                <div>
+                    <img
+                        src={props.url}
+                        alt="User Perfil Image"
+                    />
+                </div>
+                <div>
+                    <h1>{props.name}</h1>
+                    <h2>{props.status}</h2>
+                </div>
+            </div>
+            <h3>Seguir</h3>
+        </div>
+    );
+};
 
 
 export default function SideBar() {
     const UsersAccounts = [
-        <Sugestao
-            isSuggestion={false}
-            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-            name="Nome Oficial Usuário"
-            subtitle="Nome Usuário editável"
+        <User
+            name="hermione__granger"
+            editName="Hermione Jean Granger"
+            url="https://i.pinimg.com/736x/3d/33/56/3d3356d93d99fae6e15e56d3922750f3.jpg"
         />,
         <Sugestao
-            isSuggestion={true}
-            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-            name="Nome Sugestão"
-            subtitle="Nome oficial"
+            name="m_draco667"
+            status="Recente no Instagram"
+            url="http://pm1.narvii.com/7789/b0eda9a23188f88f83fcf1b9eac539943c46babar1-625-625v2_00.jpg"
         />,
         <Sugestao
-            isSuggestion={true}
-            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-            name="Nome Sugestão"
-            subtitle="Nome oficial"
+            name="dobby.dobby"
+            status="Segue-te"
+            url="https://pbs.twimg.com/tweet_video_thumb/EoUbBsNWMAAJZfz.jpg"
         />,
         <Sugestao
-            isSuggestion={true}
-            url="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-            name="Nome Sugestão"
-            subtitle="Nome oficial"
+            name="valterDusley1954"
+            status="Recente no Instagram"
+            url="https://pbs.twimg.com/profile_images/1264530941453705217/KvYwo2BF_400x400.jpg"
+        />,
+        <Sugestao
+            name="i_know_u"
+            status="Segue-te"
+            url="http://pm1.narvii.com/6304/c5beb000f11bc8302570a036b185bf547f5a2604_00.jpg"
+        />,
+        <Sugestao
+            name="lockhart.gil"
+            status="Segue-te"
+            url="http://pm1.narvii.com/6781/856fe0395e217b8cef5ac427987f18b1862cdc45v2_00.jpg"
         />
     ]
 
-    const currentUser = UsersAccounts.filter(user => user.props.isSuggestion === false);
-    const suggestions = UsersAccounts.filter(user => user.props.isSuggestion === true)
+    const currentUser = UsersAccounts.filter(user => user.type.name === "User");
+    const suggestions = UsersAccounts.filter(user => user.type.name === "Sugestao");
 
     return (
         <div className="c-sidebar">
