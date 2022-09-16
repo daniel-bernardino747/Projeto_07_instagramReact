@@ -1,9 +1,9 @@
 .c-main__stories {
-    background: #FFFFFF;
+    background: #FFF;
     border: 0.0625em solid #DBDBDB;
     border-radius: 0.1875em;
-
     height: 7.375em;
+
     overflow: hidden;
 }
 
@@ -43,6 +43,7 @@
 
 .c-stories__border, .c-stories__photo {
     border-radius: 1.875em;
+
     object-fit: cover;
     object-position: 20% 10%;
 }

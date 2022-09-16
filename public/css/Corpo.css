@@ -1,14 +1,10 @@
 .c-body {
     height: 3em;
-    max-width: 58.4375em;
     margin: 0 auto;
     margin-top: 3.375em;
+    max-width: 58.4375em;
 
     display: grid;
     grid-column-gap: 1.5em;
     grid-template-columns: minmax(38.375em, 50%) 1fr;
 }
-
-/* .c-main {
-    background-color: yellow;
-} */

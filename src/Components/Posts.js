@@ -1,41 +1,42 @@
-import { useState } from "react";
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 function Header(props) {
     return (
         <>
             <div className="c-post__header u-space-between-center u-display-flex">
+
                 <div className="u-space-between-center u-display-flex">
+
                     <img
                         src={props.photo}
                         alt="User Perfil Image"
                     />
                     <h1>{props.name}</h1>
+
                 </div>
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
+
             </div>
         </>
-    )
-}
+    );
+};
 
 
 function Post(props) {
     return (
         <>
             <section className="c-post">
-                <Header
-                    photo={props.urlPerfil}
-                    name={props.name}
-                />
-                <img
-                    src={props.urlPost}
-                    alt="Post Image"
-                />
+
+                <Header photo={props.urlPerfil} name={props.name} />
+
+                <img src={props.urlPost} alt="Post Image" />
+
                 <Footer liked={props.liked} />
+
             </section>
         </>
-    )
-}
+    );
+};
 
 export default function Posts() {
     const posts = [
@@ -57,7 +58,7 @@ export default function Posts() {
             urlPerfil="https://i.scdn.co/image/ab6761610000e5eb451eb07ddc6e68d3e474c2bf"
             liked={999}
         />
-    ]
+    ];
 
     return (
         <section className="c-main__posts">
@@ -65,5 +66,5 @@ export default function Posts() {
                 {posts.map((p) => <li>{p}</li>)}
             </ul>
         </section>
-    )
-}
+    );
+};

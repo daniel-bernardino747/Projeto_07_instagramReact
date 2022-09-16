@@ -1,4 +1,6 @@
-h1, h2, h3 {
+.c-sidebar__user h1,
+.c-sidebar__user h2,
+.c-sidebar__user h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 0.875em;
     font-weight: 500;
@@ -9,7 +11,9 @@ h1, h2, h3 {
 .c-sidebar__suggestion h1,
 .c-sidebar__suggestion h2,
 .c-sidebar__suggestion h3 {
+    font-family: 'Roboto', sans-serif;
     font-size: 0.75em;
+    font-weight: 500;
 }
 
 .c-sidebar__user img,
@@ -39,8 +43,8 @@ h1, h2, h3 {
 }
 
 .c-sidebar__user h2 {
-    padding-top: 0.1875em;
     font-weight: 300;
+    padding-top: 0.1875em;
 }
 
 
@@ -71,6 +75,7 @@ h1, h2, h3 {
 
 .c-sidebar__suggestion h2 {
     color: #8E8E8E;
+    font-weight: 400;
 }
 
 .c-sidebar__suggestion h3 {

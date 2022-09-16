@@ -21,29 +21,29 @@ body {
 
 
 
-.u-position-relative {
-    position: relative;
-}
 
 .u-display-flex {
     display: flex;
-}
-
-.u-center-xy {
-    justify-content: center;
-    align-items: center;
 }
 
 .u-center-x {
     align-items: center;
 }
 
-.u-space-between-center {
-    justify-content: space-between;
+.u-center-xy {
     align-items: center;
+    justify-content: center;
+}
+
+.u-space-between-center {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.u-position-relative {
+    position: relative;
 }
 
 .u-width-max-935 {
     width: min(97%, 58.4375em);
-    /* background-color: green; */
 }
