@@ -43,6 +43,12 @@
     padding: 0 1em;
 }
 
+.c-post__footer div div {
+    height: 100%;
+    padding: 0 0em;
+}
+
+
 .c-post__footer ion-icon {
     font-size: 1.57em;
     margin-top: 0.5em;

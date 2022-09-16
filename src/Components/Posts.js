@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Footer from "./Footer"
+
 function Header(props) {
     return (
         <>
@@ -15,33 +18,6 @@ function Header(props) {
     )
 }
 
-function Footer() {
-    const icons = [
-        <ion-icon name="heart-outline"></ion-icon>,
-        <ion-icon name="chatbubble-outline"></ion-icon>,
-        <ion-icon name="paper-plane-outline"></ion-icon>
-    ]
-
-    return (
-        <>
-            <div className="c-post__footer">
-                <div className="u-space-between-center u-display-flex">
-                    <ul className="u-display-flex">
-                        {icons.map((i) => <li>{i}</li>)}
-                    </ul>
-                    <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-                <div className="u-center-x u-display-flex">
-                    <img
-                        src="https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222"
-                        alt="User Perfil Image"
-                    />
-                    <p>Curtido por <b>daniel__bernardino</b> e <b>outras 345 pessoas</b></p>
-                </div>
-            </div>
-        </>
-    )
-}
 
 function Post(props) {
     return (
@@ -55,7 +31,7 @@ function Post(props) {
                     src={props.urlPost}
                     alt="Post Image"
                 />
-                <Footer />
+                <Footer liked={props.liked} />
             </section>
         </>
     )
@@ -64,19 +40,22 @@ function Post(props) {
 export default function Posts() {
     const posts = [
         <Post
-            name='daniel__bernardino'
-            urlPost='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
-            urlPerfil='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
+            name="ledzeppelin"
+            urlPost="https://m.media-amazon.com/images/I/61O+PqSVu8L._AC_SL1024_.jpg"
+            urlPerfil="https://www.ledzeppelin.com/sites/g/files/g2000013721/files/sites/default/files/styles/photo_detail_large/public/201809/lz50-iconb.jpg?itok=Ed4TRGP_"
+            liked={54789}
         />,
         <Post
-            name='daniel__bernardino'
-            urlPost='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
-            urlPerfil='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
+            name="theofficialccr"
+            urlPost="https://m.media-amazon.com/images/M/MV5BYzMzNjRmM2MtNDZhOC00NjY3LTk3N2MtZTA1ODE3ZjIwMzEwXkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg"
+            urlPerfil="https://lastfm.freetls.fastly.net/i/u/500x500/fcbecc41a0de413895eca78872084ac9.jpg"
+            liked={10843}
         />,
         <Post
-            name='daniel__bernardino'
-            urlPost='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
-            urlPerfil='https://i.scdn.co/image/ab6761610000e5eb207c6849d1a1f4480e6aa222'
+            name="skynyrd"
+            urlPost="https://fraze.com/wp-content/uploads/2022/04/LynyrdSkynyrd-800.jpg"
+            urlPerfil="https://i.scdn.co/image/ab6761610000e5eb451eb07ddc6e68d3e474c2bf"
+            liked={999}
         />
     ]
 
