@@ -1,56 +1,4 @@
-import { useState } from "react";
-
-function User(props) {
-    const [name, setName] = useState(props.editName);
-    const [photo, setPhoto] = useState(props.url);
-
-    function PhotoPerfil() {
-        return (
-            <img
-                onClick={
-                    () => window.confirm("Deseja trocar de foto?")
-                        ? setPhoto(prompt("Digite a URL da imagem que deseja:"))
-                        : console.log("None")
-                }
-                src={photo}
-                alt="User Image"
-            />
-        );
-    };
-
-    function IconEdit() {
-        return (
-            <ion-icon
-                onClick={
-                    () => window.confirm("Deseja trocar de nome?")
-                        ? setName(prompt("Qual nome deseja usar?"))
-                        : console.log("None")
-                }
-                name="pencil-outline"
-            ></ion-icon>
-        );
-    };
-
-    return (
-        <div className="u-center-x u-display-flex">
-
-            <div>
-                <PhotoPerfil />
-            </div>
-
-            <div>
-                <h1>{props.name}</h1>
-                <div className="u-display-flex">
-
-                    <h2>{name}</h2>
-                    <IconEdit />
-
-                </div>
-            </div>
-
-        </div>
-    );
-};
+import Usuario from "./Usuario";
 
 function Sugestao(props) {
     return (
@@ -83,7 +31,7 @@ function Sugestao(props) {
 
 export default function SideBar() {
     const UsersAccounts = [
-        <User name="hermione__granger" editName="Hermione Jean Granger" url="https://i.pinimg.com/736x/3d/33/56/3d3356d93d99fae6e15e56d3922750f3.jpg" />,
+        <Usuario name="hermione__granger" editName="Hermione Jean Granger" url="https://i.pinimg.com/736x/3d/33/56/3d3356d93d99fae6e15e56d3922750f3.jpg" />,
         <Sugestao name="m_draco667" status="Recente no Instagram" url="http://pm1.narvii.com/7789/b0eda9a23188f88f83fcf1b9eac539943c46babar1-625-625v2_00.jpg" />,
         <Sugestao name="dobby.dobby" status="Segue-te" url="https://pbs.twimg.com/tweet_video_thumb/EoUbBsNWMAAJZfz.jpg" />,
         <Sugestao name="valterDusley1954" status="Recente no Instagram" url="https://pbs.twimg.com/profile_images/1264530941453705217/KvYwo2BF_400x400.jpg" />,
@@ -91,7 +39,7 @@ export default function SideBar() {
         <Sugestao name="lockhart.gil" status="Segue-te" url="http://pm1.narvii.com/6781/856fe0395e217b8cef5ac427987f18b1862cdc45v2_00.jpg" />
     ];
 
-    const currentUser = UsersAccounts.filter(user => user.type.name === "User");
+    const currentUser = UsersAccounts.filter(user => user.type.name === "Usuario");
     const suggestions = UsersAccounts.filter(user => user.type.name === "Sugestao");
 
     return (
@@ -117,6 +65,16 @@ export default function SideBar() {
                         {suggestions.map(account => <li>{account}</li>)}
                     </ul>
 
+                </div>
+
+                <div>
+                    <p>
+                        Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
+                        Termos • Localizações • Contas mais relevantes • Hashtags •
+                        Idioma
+                    </p>
+
+                    <p>© 2021 INSTAGRAM DO FACEBOOK</p>
                 </div>
 
             </section>

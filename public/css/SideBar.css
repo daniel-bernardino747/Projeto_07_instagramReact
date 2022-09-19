@@ -8,6 +8,7 @@
 
 .c-sidebar__box-suggestions h1,
 .c-sidebar__box-suggestions h2,
+.c-sidebar__box-suggestions p,
 .c-sidebar__suggestion h1,
 .c-sidebar__suggestion h2,
 .c-sidebar__suggestion h3 {
@@ -23,6 +24,12 @@
 
     object-fit: cover;
     object-position: 20% 10%;
+}
+
+.c-sidebar__box-suggestions p {
+    color: #C7C7C7;
+    font-weight: 400;
+    margin: 2em 0;
 }
 
 
